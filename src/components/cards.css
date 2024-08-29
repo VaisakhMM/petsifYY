@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    padding: 10px 0px ;
+    background-color: #ffffff;
+    
+}
+
+.container .box {
+    width: 400px;
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.container .box .contant {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container .box .contant .img-box img {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .box .contant .img-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .box .contant .detail .info {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.container .box .contant .detail .info h2 {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container .box .contant .detail button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: #1976D2;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container .box .contant .detail button:hover {
+    background-color: #6aa9e7;
+}
+
+.overlay {
+    position: fixed; /* Changed to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of all other content */
+}
+
+.detail_container {
+    width: 600px; /* Adjust width to fit the content */
+    background: #ffffff;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1001;
+}
+
+.detail_container .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #1976D2;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.detail_container .close:hover {
+    color: #5ea9f4;
+}
+
+.detail_container .detail_contant {
+    max-width: 100%;
+    text-align: center;
+}
+
+.detail_container .detail_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.detail_container .detail_info .img-box img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.detail_container .detail_info .img-box img:hover {
+    transform: scale(1.05);
+}
+
+.detail_container .detail_info .product_detail {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.detail_container .product_detail h2,
+.detail_container .product_detail h3,
+.detail_container .product_detail h4 {
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.detail_container .product_detail h2 {
+    padding-left: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail_container .product_detail h3 {
+    font-weight: 600;
+}
+
+.detail_container .product_detail h4 {
+    font-weight: 200;
+    line-height: 1;
+}
+
+.detail_container .product_detail p {
+    margin-top: 10px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.detail_container .product_detail button {
+    margin-top: 25px;
+    padding: 12px 35px;
+    border: none;
+    outline: none;
+    background: #1976D2;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.detail_container .product_detail button:hover {
+    background-color: #62abf3;
+    transform: scale(1.05);
+}
+
